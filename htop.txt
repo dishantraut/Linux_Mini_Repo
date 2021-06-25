@@ -1,0 +1,70 @@
+**https://spin.atomicobject.com/2020/02/10/htop-guide/
+
+# htop
+
+htop is a text-mode (console or terminal) process application for Unix systems. It plays three primary roles:
+	System monitor.
+	Process-viewer.
+	Process manager.
+	
+At the very top, there are multiple numbered bars with colorful | ticks. 
+Each bar represents a CPU core, and the colorful ticks inside the bar represent the load on that core.
+
+The number of bars depends on the number of cores your CPU has. 
+For example, if your computer has 8 cores, there will be 8 bars. 
+The colors represent the type of process running on that core:
+	Blue: low priority processes.
+	Green: normal (user) processes.
+	Red: kernel processes.
+	
+Below the CPU bars are the memory (Mem) and swap (Swp) rows. 
+Just like the CPU, these rows have colorful ticks that represent the amount of memory being consumed by processes running on the computer. 
+Their colors represents the following:
+	Green: used memory pages.
+	Blue: buffer pages.
+	Yellow: cache pages.
+
+Next to the memory bars, there is a section that shows the system tasks, load average, and uptime:
+	*Tasks are the number of open processes on the system. There are three values shown: 
+	 the total number of tasks (processes) on the machine, the number of threads those tasks are broken up into, and the number of tasks currently running.
+	*Load average is a measure of the computational work performed by the CPU. 
+	 A single-core CPU with 100% utilization has a 1.0 load average. A quad-core CPU with 100% utilization has a 4.0 load average. 
+	 There are three load average numbers listed, representing the one-minute average, five-minute average, and fifteen-minute average.
+	*Uptime is the total system uptime since its last reboot.
+	
+htop provides a list containing all the running processes on the system being monitored. Each column on the header represents the following:
+	PID: process ID number.
+	USER: process owner.
+	PRI: process priority by the kernel.
+	NI: process priority reset by the user or root.
+	VIR: virtual memory the process is consuming.
+	RES: physical memory the process is consuming.
+	SHR: shared memory that the process is consuming.
+	S: current process state.
+	CPU%: percentage of CPU that the process is consuming.
+	MEM%: percentage of memory that the process is consuming.
+	TIME+: time measured in clock ticks since process execution started.
+	Command: name of the command that started the process
+	
+The footer contains basic menu commands. Some key ones include:
+	F2 to tweak features.
+	F3 for searching processes.
+	F4 for filtering processes.
+	F5 shows a process tree.
+	F6 sorts processes by specific columns.
+	F9 kills the highlighted process.
+
+Useful Shortcut Keys
+To truly become a master at using htop, be sure to use these handy shortcuts.
+	u: displays all processes owned by a particular user.
+	p: sort processes on high CPU consumption.
+	m: sort processes on high memory consumption.
+	t: sort process on time.
+	Space: tag a process
+	c: tag a process and child processes
+	Shift + u: remove all tags.
+	Shift + f: highlight and follow a process.
+	Shift + h: show/hide user and kernel processes.
+	a: set what CPU cores a process can access.
+	i: set IO priority.
+	h: help menu.

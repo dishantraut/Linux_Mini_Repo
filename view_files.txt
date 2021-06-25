@@ -1,0 +1,7 @@
+# Commands to view files
+
+cat try.txt
+nl try.txt
+head -50 try.txt
+tail -50 try.txt
+less try.txt

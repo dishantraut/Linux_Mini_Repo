@@ -1,0 +1,22 @@
+# tar
+- is an archiver used to combine multiple files into one
+	(cvf = create|verbose|forcefully)
+	mkdir dirx
+	mkdir diry
+	mkdir dirz
+	tree
+	tar -cvf dirx.tar dirx
+	ls
+	ls -l
+	dirx.tar will be treated as file/tar file/zip file (-rw-r--r--)
+	rm -rf dirx
+	tar -xvf dirx.tar
+	ls -l
+	
+# gzip
+- compression tool used to reduce the size of a file
+- is used to compress a file
+	gzip dirx.tar 
+	ls-l (OP = dirx.tar.gz & also a change is size wil be seen)
+	gunzip dirx.tar.gz
+	ls-l (OP = dirx.tar & also a change is size wil be seen)  

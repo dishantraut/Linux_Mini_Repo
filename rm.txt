@@ -1,0 +1,29 @@
+# remove
+rm
+	No output is produced by rm, since it typically only generates messages in the case of an error.
+
+rm -i (Iterative Deletion)
+	-i option makes the command ask the user for confirmation before removing each file, 
+	you have to press y for confirm deletion, any other key leaves the file un-deleted.
+
+rm -f (Force Deletion)
+	The -f option overrides this minor protection and removes the file forcefully.
+
+rm -r (Recursive Deletion)
+	option rm command performs a tree-walk and will delete all the files and sub-directories recursively of the parent directory. 
+	At each stage it deletes everything it finds. Normally, rm wouldn’t delete the directories but when used with this option, 
+	it will delete.
+	
+rm -rf *
+	Force & Recursive Delete all content of directory 
+
+rm -- -try.txt
+	To remove a file whose name begins with a dash (“-“), you can specify a double dash (“–“) separately before the file name. 
+	This extra dash is necessary so that rm does not misinterpret the file name as an option. 
+	Let say their is a file name -file.txt
+	
+rm --version
+	to get the version of rm you are running
+
+find . -type f ! -iname "*.html" -delete
+	delete files excluding specific extension 

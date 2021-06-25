@@ -1,0 +1,61 @@
+# Screen Command Full Usage
+- If you spend a lot of time in the terminal, 
+  you may find yourself using several terminals at once to perform different tasks.
+
+- For example, you may log in via SSH to a remote server and perform some tasks there. At the same time, 
+  you may want to keep a tab on the RAM and CPU utilization on the server while doing work on the local system. 
+
+- With Screen, you can do all of it from one single ‘screen’. 
+  You can send running processes and sessions to background without interrupting your current workflow.
+
+screen --version
+yum install screen
+[OR]
+sudo apt-get update
+sudo apt-get install screen
+echo "Main Screen"
+screen
+[ctrl + a] + ?
+[ctrl + a] + c								= create a new window
+echo "Screen 1"
+[ctrl + a] + n								= switch between screens/windows
+[ctrl + a] + d 								= detach from screen
+screen -r									= reattach to screen
+
+screen
+[ctrl + a] + c								= create a new window
+echo "Screen 2"
+[ctrl + a] + d
+screen -r
+screen -r  369.pts-0.DESKTOP-Q37MBAK		= if we have more than one sessions we need to mention the PID & name & port number
+[ctrl + a] + d
+
+# Logging with Screen
+- When we work with a server, it is important to keep track about what commands were executed on it. 
+- This can be done by recording a session with the combination of “Ctrl + a” followed by “H”. 
+- Screen will keep appending data to the file through multiple sessions
+
+# Terminating Screen
+	- Screen 2 termination
+		[ctrl + a] + k
+		y
+		[ctrl + a] + k
+		y
+	- Screen 1 termination
+		[ctrl + a] + k
+		y
+		[ctrl + a] + k
+		y
+
+
+kill <PID>
+
+# If error is encountered :-
+	- After reboot, each run of screen gives above message (screen -r)
+	- Actual Error = "Directory '/var/run/screen' must have mode 777."
+	
+	Solution :- 
+	screen -r
+	ls -ld /var/run/screen/
+	sudo chmod 777 /var/run/screen
+	screen -r

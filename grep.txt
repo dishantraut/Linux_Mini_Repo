@@ -1,0 +1,30 @@
+# grep
+- is a command line utility in Unix and Linux systems
+- used for finding a search patterns in the content of a given file
+- the input g/re/p performed a global (g) search for a regular expression (re), and subsequently printed (p) 
+  any matching lines
+- It performs a global research for a regular expression and prints it
+- is much faster at searching large files
+- may also see it described as Global Regular Expression (Processor | Parser | Printer). Truthfully, it does all of that.
+- grep 'string_to_match' filename
+
+cat > phone.txt
+5551231234
+555 123 1234
+555-123-1234
+(555)-123-1234
+555!123!1234
+
+ctrl + c
+cat phone.txt
+grep '\(([0-9]\{3\})\|[0-9]\{3\}\)[ -]\?[0-9]\{3\}[ -]\?[0-9]\{4\}' phone.txt
+grep '555' phone.txt
+
+cat > phone1.txt
+55512
+123 555 1234
+
+ctrl + c 
+grep '555' phone.txt phone1.txt
+grep -l 555 *.txt
+grep bash /etc/passwd

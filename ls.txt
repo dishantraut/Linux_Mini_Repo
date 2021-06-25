@@ -1,0 +1,7 @@
+# ls
+- is for getting all contents in directory
+	l -l 		=	long listing
+	ll 			= 	long listing
+	ctr + l 	= 	clear
+	ls -a 		= 	hidden files
+	ls -ltr		= 	latest modified files

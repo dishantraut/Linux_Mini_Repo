@@ -1,0 +1,10 @@
+## Ubuntu 
+sudo apt-get install tree		# Install tree program
+sudo apt list --upgradeable		# Get list of all upgradables
+sudo apt update        			# Fetches the list of available updates
+sudo apt upgrade       			# Installs some updates; does not remove packages
+sudo apt full-upgrade  			# Installs updates; may also remove some packages, if needed
+sudo apt autoremove    			# Removes any old packages that are no longer needed
+sudo apt update && sudo apt upgrade -y    # Update & Upgrade with all permissions as yes
+lsb_release -a					# Check ubuntu version
+wslfetch						# Check ubuntu version

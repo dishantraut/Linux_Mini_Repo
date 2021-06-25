@@ -1,0 +1,15 @@
+# ln = hardlink or automated/updated backup (kind of file and not link)
+ln  f_n.txt  bk_fn.txt
+cat bk_fn.txt
+cat >> bk_fn.txt
+	Updating Hardlink
+cat f_n.txt
+cat >> f_n.txt
+	Updating Actual File
+cat bk_fn.txt
+rm f_n.txt
+cat bk_fn.txt
+
+
+# ln -s = softlink or shortcut ()
+ln -s f_n.txt  fn.txt

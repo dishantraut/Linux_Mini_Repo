@@ -1,0 +1,13 @@
+# Which Shell You Are Using On Linux
+There are several shell available for Linux systems. Some of the most popular ones are:
+
+	- bash
+	- ksh
+	- zsh
+	- tcsh
+
+* commands to find out :-
+ps -p $$
+echo $0
+pstree $$
+cat /proc/$$/cmdline

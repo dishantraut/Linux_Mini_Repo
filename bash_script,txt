@@ -1,0 +1,67 @@
+# Bash Shell Script
+
+- You will often find yourself repeating a single task on Linux over and over again. It may be a simple backup 
+  of a directory or it could be cleaning up temporary files or it can even be cloning of a database.
+- Automating a task is one of the many useful scenarios where you can leverage the power of bash scripting.
+- Script files are known to be created and saved in the bash language because the instructions it contains are 
+  written in that language and it comes with an extension of .sh. 
+- Any command that you want to normally run in Terminal can be put into a script file to execute them. 
+- If you have a sequence of commands that you want to execute frequently then you can put it into a script and 
+  just call the script.
+
+Steps : -
+1. vi myscripts.sh
+
+2. Type the following :-
+#!/bin/bash  ╜
+# My First Simple Ubuntu Update Script
+echo "Script execution start..!"
+sudo apt update
+ls -l
+ls
+sudo apt upgrade -y
+echo "Script execution end..!"
+
+3. You can also check the location of bash interpreter by the following command - ( which bash )
+4. ls -l
+5. chmod +x	myscript.sh
+6. sh myscript.sh
+
+[ OR ] 
+
+1. vi try.sh
+
+2. Type the following :-
+#!/bin/bash
+echo Hello, all users!         #echo is used to display the line of text
+echo What is your name?            #Program will ask for input
+read what                          #Here user need to give input
+echo Hello, $what!                 #Input will be printed with text
+
+3. ls -l
+4. chmod +x	try.sh
+5. ls -l
+6. sh myscript.sh
+
+
+# Shebang
+NOTE:-
+- In computing, a shebang is the character sequence consisting of the characters number sign and 
+ exclamation mark (#!) at the beginning of a script. 
+- It is also called sha-bang, hashbang, pound-bang, or hash-pling.
+- It is nothing but the absolute path to the Bash interpreter.
+- All scripts under Linux execute using the interpreter specified on a first line
+- Almost all bash scripts often begin with #!/bin/bash (assuming that Bash has been installed in /bin)
+- This ensures that Bash will be used to interpret the script, even if it is executed under another shell
+
+
+** Some typical shebang lines:
+
+#!/bin/sh – Execute the file using the Bourne shell, or a compatible shell, assumed to be in the /bin directory
+#!/bin/bash – Execute the file using the Bash shell
+#!/usr/bin/env python3 – Execute with a Python interpreter, using the program search path to find it
+#!/bin/false – Do nothing, but return a non-zero exit status, indicating failure. 
+Used to prevent stand-alone execution of a script file intended for execution in a specific context, such as by the . command from sh/bash, source from csh/tcsh, or as a .profile, .cshrc, or .login file.
+- Shebang lines may include specific options that are passed to the interpreter.
+ However, implementations vary in the parsing behavior of options; for portability, 
+ only one option should be specified without any embedded whitespace. Further portability guidelines are found below.

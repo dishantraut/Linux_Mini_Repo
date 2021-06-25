@@ -1,0 +1,78 @@
+# sudo
+- Get sudo access
+	sudo su
+
+
+# cat
+- One of the most universal tools yet all it does is copy standard input to standard output
+	*Use :- 
+		- Create
+		- Concatenate File (To add more than one file into one single file)
+		- Copy File
+		- tac (To see the content in bottom to top)
+		
+cat > file1
+cat >> file1
+cat file1 file2 > file3_all
+cat file3_all
+tac file3_all
+
+	
+
+# touch
+- It is besically used accessing & modifying timestamp 
+	*Use :- 
+		- Access Time (Last time when a file was accessed) 
+			touch -a
+		- Modify Time (Last time when a file was modified)
+			touch -m
+		- Change Time (Last time when file metadata was changed)
+
+touch file1.txt
+touch file1.txt file2.txt
+
+# history
+- will give all commands entered today
+
+# hostname / hostname -i
+- details of system | machine name
+
+# ifconfig
+- sudo apt install net-tools [WSL]
+- get ip address of machine
+
+# cat /etc/os-release 
+# cat /etc/os-rel*
+	- Get details of OS
+	
+# yum
+- used to remove, uninstall, install, downgrade, upgrade iin linux
+- yellowdog uupdater modified
+
+# which
+- eg: 
+	which tree
+	which python3
+	which git
+- to get location of software files
+	
+# whoami
+- to get user 
+
+# grep
+- finds out the specified files
+
+# sort 
+- to get file data in alphabetical order
+	sort filename 
+
+
+# wget
+- is the non interactive network downloader
+- is used for download
+	wget <URL> + Enter
+	ls -l
+	yu install ___
+	
+# Delete Everything In a Directory
+	rm -rf *

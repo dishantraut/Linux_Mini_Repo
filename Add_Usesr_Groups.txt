@@ -1,0 +1,13 @@
+# useradd 
+- to create a new user
+	useradd demo_new_user
+	cat /etc/passwd
+
+# groupadd
+- to create group
+	groupadd demo_new_group
+	cat /etc/group
+	* Add one User to group
+		gpasswd -a U_N G_N
+	* Add multiple User to group
+		gpasswd -M U_N1, U_N2, U_N3, U_N4 Group_Name
