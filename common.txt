@@ -31,15 +31,19 @@ tac file3_all
 touch file1.txt
 touch file1.txt file2.txt
 
+
 # history
 - will give all commands entered today
+
 
 # hostname / hostname -i
 - details of system | machine name
 
+
 # ifconfig
 - sudo apt install net-tools [WSL]
 - get ip address of machine
+
 
 # cat /etc/os-release 
 # cat /etc/os-rel*

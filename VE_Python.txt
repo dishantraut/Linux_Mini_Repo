@@ -7,4 +7,4 @@ cd to directory
 virtualenv VE_name
 cd inside VE diectory
 source VE_name/bin/activate
-stat try.txt 
+stat try.txt

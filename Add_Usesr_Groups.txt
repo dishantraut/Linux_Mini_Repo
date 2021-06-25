@@ -3,6 +3,7 @@
 	useradd demo_new_user
 	cat /etc/passwd
 
+
 # groupadd
 - to create group
 	groupadd demo_new_group

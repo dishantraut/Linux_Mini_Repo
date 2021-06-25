@@ -17,12 +17,14 @@ The colors represent the type of process running on that core:
 	Green: normal (user) processes.
 	Red: kernel processes.
 	
+
 Below the CPU bars are the memory (Mem) and swap (Swp) rows. 
 Just like the CPU, these rows have colorful ticks that represent the amount of memory being consumed by processes running on the computer. 
 Their colors represents the following:
 	Green: used memory pages.
 	Blue: buffer pages.
 	Yellow: cache pages.
+
 
 Next to the memory bars, there is a section that shows the system tasks, load average, and uptime:
 	*Tasks are the number of open processes on the system. There are three values shown: 

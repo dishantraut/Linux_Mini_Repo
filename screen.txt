@@ -9,6 +9,7 @@
   You can send running processes and sessions to background without interrupting your current workflow.
 
 
+
 screen --version
 yum install screen
 [OR]

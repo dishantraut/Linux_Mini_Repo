@@ -21,6 +21,7 @@ i   			=  INSERT
 Shift+zz 		=  Save the file and quit
 :1,10d			=  delete form line to line 
 
+
 i - Insert at cursor (goes into insert mode)
 a - Write after cursor (goes into insert mode)
 A - Write at the end of line (goes into insert mode)

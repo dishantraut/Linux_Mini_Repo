@@ -9,8 +9,10 @@
 - If you have a sequence of commands that you want to execute frequently then you can put it into a script and 
   just call the script.
 
+
 Steps : -
 1. vi myscripts.sh
+
 
 2. Type the following :-
 #!/bin/bash  ╜
