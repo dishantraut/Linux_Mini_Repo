@@ -8,11 +8,10 @@ echo "The result of addition=$sum"
 
 # * Functions in Bash
 function Add() {
-	    echo -n "Enter a Number: "
-	        read x
-		    echo -n "Enter another Number: "
-		        read y
-			    echo "Adiition is: $((x + y))"
-		    }
-	    Add # Calling Add here
-
+	echo -n "Enter a Number: "
+	read x
+	echo -n "Enter another Number: "
+	read y
+	echo "Adiition is: $((x + y))"
+}
+Add # Calling Add here

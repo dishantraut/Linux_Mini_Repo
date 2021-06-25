@@ -8,4 +8,3 @@ second=$(date +%S)
 echo $(date)
 echo "Current Date is: $day-$month-$year"
 echo "Current Time is: $hour:$minute:$second"
-
