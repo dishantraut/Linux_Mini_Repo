@@ -5,7 +5,7 @@ Linux_Mini_Repo = Mini Repository For Shell Scripts & All Linux Knowledge.
 ## Usage
 
 ```bash
-Just copy paste the shell scripts according to your needs
+Just copy paste the shell scripts according to your needs.
 ```
 
 ## Contributing

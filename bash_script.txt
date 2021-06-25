@@ -1,3 +1,5 @@
+# https://www.ubuntupit.com/simple-yet-effective-linux-shell-script-examples/
+
 # Bash Shell Script
 
 - You will often find yourself repeating a single task on Linux over and over again. It may be a simple backup 
