@@ -1,0 +1,77 @@
+## Git
+
+	git config --global user.name "Dishant Raut"
+	git config --global user.email "dishantraut@gmail.com"
+	git config --global core.editor Vim  
+	git config --list
+	git config --global color.ui true
+
+
+# SSH KeyGen
+
+	ssh-keygen -t rsa -b 4096 -C "dishantraut@gmail.com"
+	 	- Enter ** 3
+	ls -al ~/.ssh
+	eval "$(ssh-agent -s)"
+	ssh-add ~/.ssh/id_rsa
+	cat ~/.ssh/id_rsa.pub
+
+# Git Update
+	git update-git-for-windows
+	git update
+
+
+# git init DS_Algo_Mini
+ - to create a local repository.
+ 
+ 
+# git clone URL
+ - a copy of a repository from an existing URL
+ 
+ 
+# git add README.md
+ - add one file
+ 
+ 
+# git add *
+ - add one/more files
+ 
+ 
+# create a new repository on the command line
+    echo "# Linux_Mini_Repo" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin https://github.com/dishantraut/Linux_Mini_Repo.git
+    git push -u origin main
+
+
+# push an existing repository from the command line
+    git remote add origin https://github.com/dishantraut/Linux_Mini_Repo.git
+    git branch -M main
+    git push -u origin main
+
+
+# All In One Git Command 
+    git add * ; git commit -m "Updated File - $(date +%m_%d_%Y)"; git push -u origin main
+
+
+# Pull Repo
+	git clone https://github.com/dishantraut/Linux_Mini.git
+	cd Fast_API_Mini
+	git remote set-url origin https://github.com/dishantraut/Linux_Mini.git
+		- Actual_Command = git remote set-url origin git@github.com:username/repo.git
+		- A common cause is cloning using the default (HTTPS) instead of SSH. 
+		  You can correct this by going to your repository, clicking "Clone or download", 
+		  then clicking the "Use SSH" button above the URL field and updating the URL of your origin remote like this
+	git push --set-upstream origin master
+
+
+# To Rollback To Last Commit
+	git log
+	git reset aa12cf325a2da3ea66ae848680fcd322b88017c1 --hard
+
+
+# To Remove Dir/File
+	git rm -r lib64
