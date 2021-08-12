@@ -1,0 +1,53 @@
+# Shutdown
+sudo shutdown -h now
+sudo shutdown now -h
+
+# Disk Utilization
+df -h
+
+# Wrtie a new (>) file / append (>>) to existing file
+df -h > Disk_Utilization_Logs.txt
+df -h >> Disk_Utilization_Logs.txt
+
+# Search file using grep utility (-R = resucsive in subdirectories, I = exclude binary file)
+# Syntax = grep -flags WORD_TO_LOOK_FOR /Directoy/Path
+grep -RI Yoo ~/
+
+# Check system staus
+sudo systemctl status sshd
+
+# Open Tar file Normal(.tar) Tar+Zip(tar.gz | tar.tgz)
+tar -xvf filename.tar
+tar -xvzf filename.tar.gz
+
+# Screen
+- Execute commands and keep them running even after we logged out
+sudo apt install screen -y
+Ctrl + A = Release + D = Disconnect
+screen -ls
+screen -r = Reconnect to last screen session
+screen -r screen_number = Reconnect to specific screen session
+Ctrl + A + C = Create new screen session
+Ctrl + A + N = Go to next window
+Ctrl + A + P = Go to previous window
+Ctrl + A + | = Split screen
+Ctrl + A + TAB = Go to next window
+Ctrl + A + K = Kill the screen
+
+# Root Login Pain Killer
+su root
+sudo su
+whoami
+sudo passwd root
+su root
+
+# Get User List With Passwd
+cat /etc/passwd
+
+# Find Files
+find ./dire_path -name *.jpg (case sensitive to file name / extensions)
+find ./dire_path -iname *.jpg (not case sensitive to file name / extensions)
+
+# Check Version
+cat /etc/os-release
+lsb_release -a
