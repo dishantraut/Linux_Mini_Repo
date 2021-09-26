@@ -15,3 +15,7 @@ Please make sure to update tests as appropriate.
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
+
+## References
+https://www.freecodecamp.org/news/the-linux-commands-handbook/
+https://www.freecodecamp.org/news/the-linux-commands-handbook/#the-linux-diff-command
