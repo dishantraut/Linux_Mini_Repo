@@ -1,0 +1,10 @@
+## (sftp)
+
+1 - local machine vr sftp jyacha ip te ip takne
+   sftp username@ip
+   lcd (path of local directory jithe local vr aplyala ghyaychta file tyacha path)
+   cd (jya machine vrun ghyache tya machine cha path takne ani enter krne)
+   mget -r (file name or *  krne sgle pahije asel tr)
+2- lcd local machine vr ghyaycha path
+3 - mget -r 
+4 - mput -r
