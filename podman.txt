@@ -1,0 +1,100 @@
+## Podman
+- is a daemonless, open source
+- is a Linux native tool designed to make it easy to find, run, build, share and deploy applications using 
+  Open Containers Initiative (OCI) Containers and Container Images
+- Containers under the control of Podman can either be run by root or by a non-privileged user
+- Podman manages the entire container ecosystem which includes pods, containers, container images, and container
+  volumes using the libpod library
+- There is a RESTFul API to manage containers
+- The RESTFul service is only supported on Linux.
+- Podman's local repository = /var/lib/containers
+- uses the traditional fork-exec model common across Linux processes
+- containers created using Podman, are the child process of the parent Podman process
+- has a daemon-less architecture which means it can run containers under the user starting the container
+- doesn't require root access to run its commands.
+
+
+
+## Containers
+- Containers are standalone software packages that include the code and its dependencies: libraries, tools, settings, and runtime
+- they provided faster deployment and scalability and worked uniformly across the development and staging phases
+- are lightweight, portable and secure, providing an insulated space compatible with any environment
+- By separating the software from the operating system, containers can be transferred to any location (from Linux to Windows systems, for 
+  instance), avoiding bugs and errors that would prevent them from working
+- https://www.docker.com/resources/what-container
+
+
+
+* Commands/Docs
+https://docs.podman.io/en/latest/Commands.html
+https://docs.podman.io/en/latest/Tutorials.html
+
+* CentOS/RHEL
+dnf install podman
+
+* Ubuntu
+sudo apt-get -y update
+sudo apt-get -y install podman
+
+* Info/Version
+podman info
+podman version
+
+* Running Process
+podman ps
+podman ps -a
+
+* List Images
+podman images
+
+* List Pods
+podman pod list
+
+* Container Logs
+podman logs -l
+podman logs --latest
+
+* Container PID
+podman top -l
+
+* Inspect Running Container
+podman inspect -l | grep IPAddress
+
+* Stop Container
+podman stop <container-id>
+podman stop --latest
+
+* Remove multiple / single containers
+podman rm --latest
+podman rm container-id-1 container-id-2 container-id-3
+podman rm -a # Clear all continers make sure all continers are not in running phase
+
+* Delete Image
+podman rmi <image-id>
+podman rmi --a imageID
+podman rmi --all imageID
+podman rmi --f imageID
+podman rmi --force imageID
+podman rmi <image-id> <image-id> <image-id>
+
+* Exit Status
+0 = All specified images removed
+1 = One of the specified images did not exist, and no other failures
+2 = One of the specified images has child images or is being used by a container
+125 = The command fails for any other reason
+
+
+
+
+* Example 1
+podman search busybox # Find [busybox] container image
+podman run -it docker.io/library/busybox # Run [busybox] container image
+podman build -t nginx https://git.io/Jf8ol # Build a Nginx web server on top of a Debian base image
+podman ps # Check for running containers
+podman images # Check for [nginx] and [debian] images
+podman run -d -p 8080:80 nginx # Run the [ngnix] image from local cache
+podman ps # Check for [ngnix] running containers
+curl localhost:8080 # Check for ping on server
+http://69.164.216.51:8080/ # Check ping on browser
+podman stop <container-id>
+podman rm <container-id>
