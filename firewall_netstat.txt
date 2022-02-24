@@ -1,0 +1,22 @@
+# netstat to see the listening processes
+netstat -tulnp
+netstat -tuln
+t – Show TCP
+u – Show UDP
+l – Show only listening processes (netstat can show both listening and all established connections, i.e. as a client too)
+n – Do not resolve network IP address names or port numbers
+p – Show the process name that is listening on the port
+# ss to see the listening processes
+ss -nutlp
+# lsof to find open ports
+lsof -i
+# Listing the firewall rules
+service iptables status
+
+https://www.basezap.com/open-close-ports-centos-6-7/
+https://www.ibm.com/docs/en/spectrum-scale/5.0.5?topic=firewall-examples-how-open-ports
+
+1. Check open ports: firewall-cmd --list-all
+2. Add new port: firewall-cmd --zone=public --permanent --add-port 8080/tcp
+3. Reload firewall settings: firewall-cmd --reload
+4. Check open ports: firewall-cmd --list-all
