@@ -1,0 +1,49 @@
+## SFTP User Creation
+
+Step 1 – 
+	Create Account
+	First of all, create a user account to use for sftp access. 
+	Below command will create a user named bechftp user with no shell access.
+
+	# adduser --shell /bin/false <username>
+	# passwd <username>
+	  <Password>
+
+Step 2 – 
+	Create Directory
+
+	Now, create the directory structure to be accessible by sftp user & give the appropriate permissions
+
+	mkdir /home/bechftp/comp_repo
+	mkdir /home/bechftp/master_repo
+	mkdir /home/visa_repo
+	mkdir /home/bechftp/visa_repo/v_incomning
+	mkdir /home/bechftp/visa_repo/v_outgoing
+
+	cd /home/<username>
+	chown -R bechbtftp:bechbtftp *
+	chown root:root /home/<username>
+	chown root:root /home
+	chmod -R 755 /home/<username>
+
+
+Step 3 – 
+	Configure SSH for SFTP
+	Now edit the SSH configuration file in a text editor &  add the following settings at end of file
+
+	vim /etc/ssh/sshd_config
+
+	Match User bechbtftp 
+	ForceCommand internal-sftp
+	PasswordAuthentication yes
+	ChrootDirectory /home/bechbtftp 
+	PermitTunnel no
+	AllowAgentForwarding no
+	AllowTcpForwarding no
+	X11Forwarding no
+
+Step 4 - 
+	Save the configuration and restart SSH service to apply changes.
+	systemctl restart sshd.service
+	After user creation provide read and Execute permission only
+	chmod -R 500 *
