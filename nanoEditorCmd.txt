@@ -1,0 +1,20 @@
+## Nano Text Editor
+
+open file = nano <filename>.extension
+save as = Ctrl+O
+save = Ctrl+S
+exit = Ctrl+X
+search = Ctrl+W (next instance = Alt+W)
+backward setach = Ctrl+Q
+replace = Ctrl+\ (Y=next | Ctrl+A)
+copy = Alt+6
+paste = Ctrl+U
+cut = Ctrl+K
+markset/selectText = Ctrl+6
+undo = Alt+U
+redo = Alt+E
+begin of line = Ctrl+A
+end of line = Ctrl+E
+start of doc = Ctrl+Y
+end of doc = Alt+/
+go to = Ctrl+/
